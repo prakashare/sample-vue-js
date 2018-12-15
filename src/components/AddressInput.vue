@@ -14,14 +14,14 @@ export default {
   },
   data() {
     return {
-      // address: JSON.parse(JSON.stringify(this.value))
-      address: this.value
+      address: JSON.parse(JSON.stringify(this.value))
+      // address: this.value
     };
   },
   methods: {
     onChange($event) {
       console.log("Event: ", $event.target.value, this.address);
-      // this.$emit("input", JSON.parse(JSON.stringify(this.address)));
+      this.$emit("input", JSON.parse(JSON.stringify(this.address)));
     }
   }
 };
